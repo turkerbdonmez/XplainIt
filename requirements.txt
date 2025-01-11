@@ -1,2 +1,12 @@
 streamlit
 pandas
+numpy
+matplotlib
+scikit-learn
+xgboost
+lightgbm
+catboost
+shap
+lime
+interpret
+Pillow
