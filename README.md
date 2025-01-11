@@ -24,7 +24,7 @@ Ensure you have Python installed. This project requires Python 3.7 or above.
 
 1. Clone the repository:
    ```
-   $ git clone https://github.com/your-repo/XplainIt.git
+   $ git clone https://github.com/turkerbdonmez/XplainIt.git
    $ cd XplainIt
    ```
 
@@ -42,37 +42,37 @@ Ensure you have Python installed. This project requires Python 3.7 or above.
 
 ## :hammer_and_wrench: Example Workflow
 
-### 1. Load CSV
-- Upload your CSV file (up to 200MB).
-- Example: `final (2).csv` loaded with `,` as the delimiter and `iso-8859-9` encoding.
+### 1. Load Data File
+- Upload your data file (up to 200MB).
+- Example: `dataset_final.csv` loaded with `,` as the delimiter and `utf-8` encoding.
 
-### 2. Convert Potential Categorical Columns (Optional)
-- Detect and convert categorical columns to numeric format.
+### 2. Detect and Convert Categories (Optional)
+- Automatically detect and convert categorical columns to numeric format.
 - Example: No categorical columns detected in this workflow.
 
-### 3. Select Target & Feature Variables
-- Target Column: `Cns`
-- Feature Columns: `HDL`, `HGB`, `HOMA_IR`, `HbA1c`, `Kalsiyum`
+### 3. Specify Target & Features
+- Target Column: `Outcome`
+- Feature Columns: `Cholesterol`, `Hemoglobin`, `Insulin Resistance`, `Blood Glucose`, `Calcium`
 
-### 4. Missing Data Handling + Basic Stats
-- Missing Data Strategy: `Fill mean`
-- Train/Test Split Ratio (Comparison): `0.2`
+### 4. Handle Missing Data and Basic Stats
+- Missing Data Strategy: `Fill median`
+- Train/Test Split Ratio (Comparison): `0.3`
 
-### 5. Compare Models
-- Evaluate default models and display comparison metrics.
+### 5. Evaluate Models
+- Compare default models and display evaluation metrics.
 
-### 6. Choose Final Model & SHAP/LIME Analysis
-- Final Model: `XGBoost`
-- Train/Test Split Ratio (Final): `0.2`
+### 6. Final Model Selection & SHAP/LIME Analysis
+- Final Model: `LightGBM`
+- Train/Test Split Ratio (Final): `0.25`
 
 #### SHAP Analysis
 - Generate SHAP summaries, feature importance (bar), and dependence plots.
-- Local SHAP plots generated with titles: `Local SHAP idx={id}`.
+- Local SHAP plots generated with titles: `SHAP Plot Instance {id}`.
 
 #### LIME Analysis
-- Explanation format: `Local Explanation for instance {id}`
-- Plot type: `Original` (HTML) or `Both` (HTML and custom bar chart).
-- Number of features displayed: `6`
+- Explanation format: `Explanation for Instance {id}`
+- Plot type: `Both` (HTML and custom bar chart).
+- Number of features displayed: `5`
 
 ## :file_folder: Directory Structure
 
